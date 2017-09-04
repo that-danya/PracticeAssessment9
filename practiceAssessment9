@@ -1,0 +1,83 @@
+Recursion:
+    
+    Refer to line one to see recursion in action.
+
+    Recrusion is an occurance in which a function or operation ends up calling itself inside said function or operation. This would result in an infinite loop if no base case or stopping condition was listed. Recursion is helpful when there is repetition in a function.
+
+    Since functions can call other functions, and run line by line, a function can call itself (and resolve itself) without breaking. This is primarily because the bottom level recursion must resolve before returning. 
+
+Base case:
+    
+    A base case is the condition in which the function is looking for in order to stop recursing. Sometimes this is easily found by the programmer when thinking about 'at which point will this function break or error out?' but a base case does not necessarily need to be a degenerative case. If no base case exisited, this would result in an infinite loop that would error out on the 1000th loop unless otherwise indicated progromatically. 
+    
+Graphs:
+    
+    A graph is a data stucture of connected nodes with the possibility of sibling nodes to share a connection. The graph can be non-directional and functions similarly to a tree. Graphs are great for mapping out relationships that may overlap. 
+
+How is a graph different from a tree?
+
+    While a tree is a type of graph, it does not contain the ability for children nodes to share connections with each other. 
+
+Example of graph:
+    
+    A directory of Facebook users is a great example of when using a graph would be useful. When I look for mutual connections, I am merely checking to see if through my friends, do our nodes connect?
+
+*******
+RUNTIME
+*******
+
+Data Structure             Index  Search  Add-R  Add-L  Pop-L  Pop-R
+_____________________________________________________________________
+                          |      |      |      |      |      |      |
+Python List(Array)        | O(1) | O(n) | O(1) | O(n) | O(n) | O(1) |
+Linked List               | O(n) | O(n) | O(1) | O(1) | O(1) | O(n) |
+Doubly-Linked List        | O(n) | O(n) | O(1) | O(1) | O(1) | O(1) | 
+Queue (Array)             |  --  |  --  | O(1) |  --  | O(n) |  --  |   
+Queue (LL or DLL)         |  --  |  --  | O(1) |  --  | O(1) |  --  |
+Stack (Array, LL, or DLL) |  --  |  --  | O(1) |  --  |  --  | O(1) | 
+Deque (DLL)               |  --  |  --  | O(1) | O(1) | O(1) | O(1) | 
+__________________________|______|______|______|______|______|______|   
+
+
+Data Structure             Get      Add     Delete    Iterate    Memory
+______________________________________________________________________
+
+Dictionary (Hash Map)      O(1)     O(1)     O(1)      O(n)      medium
+Set (Hash Map)             O(1)     O(1)     O(1)      O(n)      medium
+Binary Search Tree         O(logn)  O(logn)  O(logn)   O(1)      a little
+Tree                       O(n)     O(1)     O(1)      O(1)      a little
+
+
+Bubble Sort:
+
+    Moves the largest number in the list to the end, by comparing each number to it's precedesesor and swapping the larger for the right position.
+    
+    Start at the 0 index of a list.
+    Set counter equal to 1.
+    For each item in length of the list (min counter):
+        Compare the first and second item in the list. 
+        If item on the left is greater than the other, swap places.
+        Move over index by 1 and repeat. 
+    Increase counter by 1 and repeat until counter is greater than list. 
+
+Merge Sort:
+    
+    Recursively split list in half until base case is two lists continaing 1 item. 
+    Compare lists, whichever is lower gets appended first to 'new' list.
+    'New' sorted list is returned to previous recurse. 
+    Each item at index 1 is compared. The lower gets appended to 'new' list.
+    Comparing at index 1 happens until one list is empty.
+    Remainders are appended to 'new' list and returned.
+    This happens until all recurses are resolved.
+
+
+Quick Sort:
+
+    A pivot point (random number in list) is picked.
+    Each number is assigned to lo list if lower than pivot, hi if higher, and eq if equal. 
+    The quicksorted(call step one and two on) lo list is concatnated with the equal list and concatenated with the quicksorted(call step one and two on) hi list. This is returned. 
+
+    The recurse continues on each hi and lo list until the list is less than 2 items.
+    
+
+                                                                             
